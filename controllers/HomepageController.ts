@@ -1,10 +1,11 @@
-import { response, ROUTE } from "@ooneex/decorator";
-import { HttpResponse } from "@ooneex/http";
+import { Route } from "@ooneex/decorator";
+import { Request, Response as HttpResponse } from "@ooneex/http";
 
 export class HomepageController {
-  @ROUTE("homepage", "/")
+  @Route("homepage", "/")
   public index(
-    @response response: HttpResponse,
+    _request: Request,
+    response: HttpResponse,
   ): Response {
     return response.json({ message: "Welcome" });
   }
