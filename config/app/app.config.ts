@@ -1,6 +1,8 @@
-const config = {
+import { AppConfigType } from "./types.ts";
+
+const config: AppConfigType = {
   directories: {
-    "root": new URL("../..", import.meta.url).pathname.replace(/\/\/$/, "/"),
+    "root": new URL("../..", import.meta.url).pathname.replace(/\/+$/, ""),
     "config": "config",
     "controllers": "controllers",
     "middlewares": "middlewares",
