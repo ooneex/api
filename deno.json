@@ -10,8 +10,8 @@
     ]
   },
   "imports": {
-    "@ooneex/collection": "../Core/Collection/mod.ts",
     "@config/app": "./config/app/mod.ts",
+    "@ooneex/collection": "../Core/Collection/mod.ts",
     "@ooneex/config": "../Core/Config/mod.ts",
     "@ooneex/controller": "../Core/Controller/mod.ts",
     "@ooneex/directory": "../Core/Directory/mod.ts",
@@ -26,8 +26,7 @@
     "@ooneex/path": "../Core/Path/mod.ts",
     "@ooneex/routing": "../Core/Routing/mod.ts",
     "@ooneex/decorator": "../Core/Decorator/mod.ts",
-
-    "@ooneex/testing/": "https://deno.land/std@0.182.0/testing/"
+    "testing/": "https://deno.land/std@0.182.0/testing/"
   },
   "tasks": {
     "start": "deno run -A --watch=.env,.env.local,config/,controllers/,middlewares/ index.ts",

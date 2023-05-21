@@ -2,7 +2,8 @@ import { print } from "@ooneex/exception";
 import { Server } from "@ooneex/http";
 import { Kernel } from "@ooneex/kernel";
 
-Deno.env.set("ROOT_DIR", new URL(".", import.meta.url).pathname);
+Deno.env.set("OONEEX_APP_TYPE", "api");
+Deno.env.set("OONEEX_APP_ROOT_DIR", new URL(".", import.meta.url).pathname);
 
 try {
   await Kernel.boot();
